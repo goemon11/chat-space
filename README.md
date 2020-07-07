@@ -25,7 +25,7 @@
 |Colum|Type|Options|
 |-----|----|-------|
 |user_id|integer|null: false, foreign_key|
-|groups_id|integer|null: false, foreign_key|
+|group_id|integer|null: false, foreign_key|
 
 ### Association
 - belongs_to: user
