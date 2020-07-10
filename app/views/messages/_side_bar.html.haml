@@ -1,11 +1,12 @@
 .SideBar
   .Side-header
     .User-items
-      %p.username user
+      %p.username 
+        = current_user.name
       .User-icons
         = link_to "#", class: "list" do
           = icon('far', 'edit', class: 'edit')
-        = link_to "#", class: "list" do
+        = link_to edit_user_path(current_user), class: "list" do
           = icon('fas', 'cog')
   .SideBar__group
     .GroupBox
