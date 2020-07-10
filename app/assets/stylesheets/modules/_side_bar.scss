@@ -1,0 +1,72 @@
+$white: #ffffff;
+
+
+.SideBar{
+    background-color: #253141;
+    width: 300px;
+    height: 100vh;
+    .Side-header{
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      .User-items{
+        height: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+          .User-icons{
+              display: flex;
+              justify-content: end;
+          }
+
+            a.list{
+            color: $white;
+            text-decoration: none;
+            font-weight: bold;
+            }
+              i.edit{
+              margin:0 5px;
+              }
+
+          
+
+       
+      
+    }
+    &__group{
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+    }
+      .GroupBox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        font-weight: bold;
+          .GroupBox__name{
+
+          }
+            p.name{
+              color: $white;
+              font-size: 15px;
+              margin-top: 20px;
+              margin-bottom: 5px;
+              
+            }
+          .GroupBox__message{
+
+          }  
+            p.message{
+            color: $white;
+            font-size: 11px;
+            margin-top: 0;
+            margin-bottom: 40px;
+            }
+      }
+}
