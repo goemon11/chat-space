@@ -1,0 +1,119 @@
+$white: #ffffff;
+$lightblue:#38aef0;
+
+.ChatMain{
+  background-color: $white;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  .GroupHeader{
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    
+       
+      
+    .GroupHeader__Name{
+    color: #333333;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    }
+    ul.GroupHeader__Member{
+    font-size: 12px;
+    color: #999999;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    } 
+    
+
+    
+    a.Edit{
+      font-size: 16px;
+      border: 1px solid $lightblue;
+      color: $lightblue;
+      padding: 0 20px;
+      height: 40px;
+      width: 72px;
+      margin-top: 28px;
+      text-decoration: none;
+      line-height: 40px;      
+    }
+  
+  }
+  &__message{
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 35px 40px 0;
+    overflow: scroll;
+    .MessageBoxUser{
+      display: flex;
+      margin-bottom: 12px;
+      &__Username{
+        font-size: 16px;
+        color: #333333;
+        font-weight: bold;
+      }
+      &__Date{
+        color: #999999;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .MessageText{
+      margin-top: 0px;
+      margin-bottom: 46px;
+      font-size: 14px;
+      color: #434A54;
+    }
+    
+  }
+
+
+  &__bottom{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px ;
+    form.Formbox{
+      display: flex;
+      justify-content: space-between;
+        .Form__items{
+          width: 100%;
+          position: relative;
+          background-color: $white;
+          
+          display: flex;
+            &__text{
+              width: 100%;
+              height: 50px;
+              padding-left: 10px;
+              border: none;
+              font-size: 17px;
+            }
+            &__image{
+            font-size: 25px;
+            position: absolute;
+            right: 10px;
+            line-height: 50px;
+            &__hidden{
+              display: none;
+              }
+            }
+            
+        }
+        
+        .Send-Btn{
+          padding: 0 30px;
+          background-color: $lightblue;
+          color: #fff;
+          font-size: 16px;
+          border: none;
+          margin-left: 15px;
+        }
+    }
+  }
+}
+
