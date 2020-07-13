@@ -49,6 +49,11 @@ $white: #ffffff;
         flex-direction: column;
         padding: 0 20px;
         font-weight: bold;
+        a{
+          text-decoration: none;
+        }
+          
+          
           .GroupBox__name{
 
           }
@@ -67,6 +72,7 @@ $white: #ffffff;
             font-size: 11px;
             margin-top: 0;
             margin-bottom: 40px;
+            
             }
       }
 }

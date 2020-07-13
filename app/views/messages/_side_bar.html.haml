@@ -4,17 +4,15 @@
       %p.username 
         = current_user.name
       .User-icons
-        = link_to "#", class: "list" do
+        = link_to new_group_path, class: "list" do
           = icon('far', 'edit', class: 'edit')
         = link_to edit_user_path(current_user), class: "list" do
           = icon('fas', 'cog')
   .SideBar__group
-    .GroupBox
-      %p.name techcamp
-      %p.message まだメッセージがありません 
-    .GroupBox
-      %p.name techcamp
-      %p.message まだメッセージがありません 
-    .GroupBox
-      %p.name techcamp
-      %p.message まだメッセージがありません 
+    - current_user.group.each do |group|
+      .GroupBox
+        = link_to '#' do
+          %p.name
+            = group.name
+          %p.message
+            メッセージはないです。 
