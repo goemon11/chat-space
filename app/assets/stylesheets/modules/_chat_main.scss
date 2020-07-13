@@ -44,7 +44,7 @@ $lightblue:#38aef0;
     }
   
   }
-  &__message{
+  .MessageField{
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 35px 40px 0;
