@@ -1,34 +1,21 @@
 .ChatMain
   .GroupHeader
     .GroupHeader__Details
-      .GroupHeader__Name test
-      %ul.GroupHeader__Member 
-        Member:
+      .GroupHeader__Name
+        = @group.name
+      %ul.GroupHeader__Member
+        Member :
         %li.GroupHeader__List 
-          ryo
-    = link_to "#", class: "Edit" do
+          - @group.users.each do |user|
+            = user.name
+    = link_to edit_group_path(@group), class: "Edit" do
       Edit
-  .ChatMain__message
-    .MessageBox
-      .MessageBoxUser
-        .MessageBoxUser__Username ryo
-        .MessageBoxUser__Date 2019/11/20(wed) 17:43:01
-      .MessageText
-        %p.MessageLine おはよう
-      .MessageBoxUser
-        .MessageBoxUser__Username ryo
-        .MessageBoxUser__Date 2019/11/20(wed) 17:43:01
-      .MessageText
-        %p.MessageLine おはよう
-      .MessageBoxUser
-        .MessageBoxUser__Username ryo
-        .MessageBoxUser__Date 2019/11/20(wed) 17:43:01
-      .MessageText
-        %p.MessageLine おはよう 
+  .MessageField
+    =render @messages
   .ChatMain__bottom
-    = form_with url: "#", class: "Formbox" do |f|
+    = form_with model: [@group, @message], html: {class: "Formbox"}, local: true do |f|
       .Form__items
-        = f.text_field :message, placeholder: "type a message", class: 'Form__items__text'
+        = f.text_field :content, placeholder: "type a message", class: 'Form__items__text'
         %label{class: "Form__items__image"}
           = icon('far', 'image', class: 'Form__icons')
           = f.file_field :image, class: 'Form__items__image__hidden'
