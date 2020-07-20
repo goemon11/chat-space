@@ -42,6 +42,7 @@ $white: #ffffff;
     &__group{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      overflow: scroll;
     }
       .GroupBox{
         width: 100%;
@@ -55,7 +56,6 @@ $white: #ffffff;
           
           
           .GroupBox__name{
-
           }
             p.name{
               color: $white;
