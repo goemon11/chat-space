@@ -11,7 +11,7 @@
   .SideBar__group
     - current_user.group.each do |group|
       .GroupBox
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class: "GroupBox" do
           %p.name
             = group.name
           %p.message
