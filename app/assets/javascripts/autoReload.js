@@ -10,12 +10,12 @@ $(function(){
                 </div>
                 <div class="MessageBoxUser__Date">
                   ${message.created_at}
-                </div>
-                <div class="MessageText">
-                  <p class="MessageLine">
-                    ${message.content}
-                  </p>
-                  <img class="Message__image" src="${message.image}">
+                    <div class="MessageText">
+                      <p class="MessageLine">
+                        ${message.content}
+                      </p>
+                      <img class="Message__image" src="${message.image}">
+                    </div>
                 </div>
               </div>
             </div>
@@ -31,11 +31,11 @@ $(function(){
             </div>
             <div class="MessageBoxUser__Date">
               ${message.created_at}
-            </div>
-            <div class="MessageText">
-              <p class="MessageLine">
-                ${message.content}
-              </p>
+                <div class="MessageText">
+                <p class="MessageLine">
+                  ${message.content}
+                </p>
+              </div>
             </div>
           </div>
         </div>
